@@ -87,6 +87,13 @@ const AppLayout: React.FC = () => {
             >
               Get in Touch
             </a>
+            <a
+              href="/Omoruyi_Idehen_Resume.pdf"
+              download
+              className="bg-yellow-500 text-black px-8 py-3 rounded-full hover:bg-yellow-600 transition-all transform hover:scale-105 shadow-lg"
+            >
+              Download Resume
+            </a>
           </div>
           <div className="mt-12 animate-bounce">
             <ArrowDown className="mx-auto text-gray-400" size={24} />
