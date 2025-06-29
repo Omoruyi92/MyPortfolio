@@ -50,7 +50,7 @@ const AppLayout: React.FC = () => {
       image: '/drivingschool.jpg',
       tools: 'React, Node.js, Express, Firebase, React Native',
       githubUrl: 'https://github.com/Omoruyi92/DrivingSchoolApp',
-      liveUrl: 'https://driving-school-app-hazel.vercel.app/'
+      liveUrl: 'https://driving-school-app-xqpi.vercel.app/'
     }
   ];
 
