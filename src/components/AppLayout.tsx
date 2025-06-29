@@ -42,7 +42,7 @@ const AppLayout: React.FC = () => {
       image: '/renthub.jpg',
       tools: 'React, Next.js, Tailwind CSS, Node.js, MongoDB',
       githubUrl: 'https://github.com/Omoruyi92/RentHub',
-      liveUrl: 'https://rent-hub-1bac-42x4uuavg-omoruyi-idehens-projects-b78dcd86.vercel.app/'
+      liveUrl: 'https://rent-hub-1bac.vercel.app/'
     },
     {
       title: 'Driving School Application',
