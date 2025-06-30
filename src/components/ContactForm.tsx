@@ -12,13 +12,22 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
+
+    // Simulate form submission with cancellation flag for unmounting
+    let isCancelled = false;
+
+    const timeout = setTimeout(() => {
+      if (!isCancelled) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+        setIsSubmitting(false);
+      }
     }, 1000);
+
+    return () => {
+      isCancelled = true;
+      clearTimeout(timeout);
+    };
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -39,7 +48,7 @@ const ContactForm: React.FC = () => {
               I'm always open to discussing new opportunities, collaborations, or just having a chat about technology and development.
             </p>
           </div>
-          
+
           <div className="space-y-4">
             <a
               href="mailto:omoruyiidehen@outlook.com"
@@ -48,7 +57,7 @@ const ContactForm: React.FC = () => {
               <Mail size={20} />
               omoruyiidehen@outlook.com
             </a>
-            
+
             <div className="flex gap-4 pt-4">
               <a
                 href="https://linkedin.com/in/omoruyiidehen"
